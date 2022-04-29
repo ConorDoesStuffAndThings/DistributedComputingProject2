@@ -1,14 +1,5 @@
-
-import javax.net.ssl.SSLServerSocketFactory;
-import javax.net.ssl.SSLSocketFactory;
-import java.io.*;
 import java.net.*;
 import javax.swing.*;
-
-/**
- * This module contains the presentaton logic of an Echo Client.
- * @author M. L. Liu
- */
 public class EchoClient2{
 
    public static void main(String[] args){

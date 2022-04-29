@@ -1,26 +1,11 @@
-
-import javax.net.ssl.SSLServerSocketFactory;
 import java.io.*;
-import java.lang.reflect.Array;
-import java.net.*;
-import java.util.ArrayList;
-import java.util.Hashtable;
-import java.util.Map;
 import com.distinct.rpc.*;
-
-/**
- * This module contains the application logic of an echo server
- * which uses a stream-mode socket for interprocess communication.
- * Unlike EchoServer2, this server services clients concurrently.
- * A command-line argument is required to specify the server port.
- * @author M. L. Liu
- */
 
 public class EchoServer3 extends ECHOPROGServer{
 
     public static void main(String[] args) throws IOException{
         try{
-			new EchoServer3();//creates an instance of the server stub
+			new EchoServer3();
 			System.out.print("Server running...");
 		}
 		
@@ -35,19 +20,19 @@ public class EchoServer3 extends ECHOPROGServer{
 	}
 	
 	public String login_1(String arg1, String arg2){
-		if(arg1.equals("Jaster")){
+		if(arg1.equals("Conor")){
 			//keep things simple 
-			return "101 Logged in. Welcome Back";
+			return "101: Login Successful";
 		}
 		
-		else if(arg1.equals(".")){
-			return "103 Error Occured";
+		else if(arg1.equals("")){
+			return "103: Login Failed, please try again";
 		}
 		
 		else{
-			return "102 Logged in. Welcome new User";
+			return "102: New User Login Successful";
 		}
 			
 	}
-} // end class
+}//end class
 
